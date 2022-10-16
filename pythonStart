@@ -1,0 +1,153 @@
+### WRITING INTEGER INTO A STRING
+## format method 
+a = int
+h_txt = "{} is greater than 10"
+b_txt = "{} is less than 10 but higher than 5"
+l_txt = "{} is less than 10"
+
+def formula(a):
+      if a > 10:
+          print(h_txt.format(a))
+      elif a == 10: 
+          print(f"a is {a}")
+      elif a > 5:
+          print(b_txt.format(a))
+      elif a == 5: 
+          print(f"a is {a}")
+      else:
+          print(l_txt.format(a))
+              
+formula(10)
+formula(7)
+formula(15)
+formula(5)
+
+## another example
+width = 30
+length = 30 
+depth = 30 
+
+cube_extension = "this cube's width is {}, length is {} and the depth is {}."
+my_cube = cube_extension.format(width, length, depth)
+print(my_cube)   
+
+##another example
+cost = 25.9
+time = 7
+indigriends = "chicken", "salt", "pepper", "thyme"
+receipe = ("this reciepe has {}, and needs {} minutes to cook and costs {} $")
+print(receipe.format(indigriends,time,cost))  
+
+
+
+
+### LISTS
+
+thisList = ["apple", "banana", 4 , True]   
+print(thisList)
+
+thisList[1] = "watermelon"
+print(thisList)
+
+thisList.insert(1,"melon")
+print(thisList)
+
+thisList.append(64)
+print(thisList)
+
+thatList = ["red", "yellow", "green", 4, True, 64]
+thisList.extend(thatList)
+print(thisList)
+
+#remove first 2 item
+thisList.remove("apple") #this one remove the actual first item
+thisList.pop(0)  #after removing actual first item the 2nd item will be first item so this code will remove the current first item 
+print(thisList)
+
+del thatList
+
+thisList.clear()
+print(thisList)
+
+thisList.extend(["blue", "red", "purple"])
+
+thisList.append("yellow")
+
+print(thisList)
+
+
+
+
+### FOR LOOP
+
+##this code will print your list by column by column 
+
+for x in thisList:    
+    print(x)
+    
+for x in range(len(thisList)):
+    print(thisList[x])
+    
+### WHILE LOOP   
+
+a = 0 
+while a < len(thisList):
+    print(thisList[a])
+    a += 1
+
+[print(a) for a in thisList]
+
+del thisList
+
+##List Comprehension
+
+colors = ["blue", "red", "orange", "purple", "yellow", "green","black", "white"]
+newList = []
+for x in colors:
+     if "u" in x:
+         newList.append(x)       
+print(newList)
+
+##or
+
+newListOr = [x for x in colors if "u" in x ]
+print(newListOr)
+
+newColors = []
+
+for x in colors : 
+    
+    if x != "purple" and x != "red":
+        newColors.append(x)
+print(newColors)
+
+newColors = [x.upper() for x in newColors]    
+print(newColors)
+
+for x in range(3): 
+       newColors[x] = newColors[x].lower()          
+print(newColors)
+
+##SORT
+
+
+newColors.sort()
+newColorsCapitalized = [name.capitalize() for name in newColors]
+print(newColorsCapitalized)
+
+newColorsCapitalized.sort(reverse = True)
+print(newColorsCapitalized)
+
+def location(n):
+    return abs (n - 20)
+
+numbers = [10, 23, 41, 54, 25]
+
+numbers.sort(key = location)
+print(numbers)
+
+numbers.reverse()
+print(numbers)
+
+
+         
