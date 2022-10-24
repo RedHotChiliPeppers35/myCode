@@ -1,11 +1,19 @@
-### Strings
+### Strings:
 
-print("I am Ata and I used to live in Izmır \nCurrently I am studying in Istanbul")   ## \n skips to the next row
-txt = "We are the so-called \"Yildizs\" from the Istanbul."   ## \ prints the " for this text
-print(txt)
+      ## \n skips to the next row
+print("I am Ata and I used to live in Izmır \nCurrently I am studying in Istanbul") 
+      ##
+      x = "Hello World !"
+print(len(x))
+      ## \ prints the " for this text
+txt = "We are the so-called \"Yildizs\" from the Istanbul." 
+
+### Integers: 1,2,3,4,5,6,7,8,9,10,11,12 .....
+### Float: 0.1, 0.2, 0.3, ....., 1.6, ...., 5.5, ...      
+### Complex: 1j, 3+5j, .....
 
 
-## Booleans
+### Booleans:
 
 print(10 > 9)
 print(2 < 1)
@@ -23,7 +31,6 @@ print(bool(0))
 print(bool(""))
 
 def myFunction():
-    
     return False
 
 if myFunction():
@@ -37,10 +44,7 @@ print(x is y)
 
 another = "Text"
 print(isinstance(another,str))
-      
-x = "Hello World !"
-print(len(x))
-
+  
 
 
 ### WRITING INTEGER INTO A STRING
@@ -68,7 +72,7 @@ formula(7)
 formula(15)
 formula(5)
 
-## example
+## example 1
 width = 30
 length = 30 
 depth = 30 
@@ -77,7 +81,7 @@ cube_extension = "this cube's width is {}, length is {} and the depth is {}."
 my_cube = cube_extension.format(width, length, depth)
 print(my_cube)   
 
-## example
+## example 2 
 cost = 25.9
 time = 7
 indigriends = "chicken", "salt", "pepper", "thyme"
@@ -117,7 +121,7 @@ thisList.extend(["blue", "red", "purple"])
 thisList.append("yellow")
 print(thisList)
 
-example = [1, 2, 3, 4, 1, 1, 1, 4, 5]   ##shows me the "number 4" between 4-8 index
+list1 = [1, 2, 3, 4, 1, 1, 1, 4, 5]   ##shows me the "number 4" between 4-8 index
 print(list1.index(4, 4, 8))
 
 
@@ -138,7 +142,6 @@ print(list1.index(4, 4, 8))
 ### FOR LOOP
 
 ##this code will print your list by column by column 
-
 for x in thisList:    
     print(x)
     
@@ -185,16 +188,24 @@ for x in range(3):
        newColors[x] = newColors[x].lower()          
 print(newColors)
 
+
 ##SORT
 
-
 newColors.sort()
-newColorsCapitalized = [name.capitalize() for name in newColors]
-print(newColorsCapitalized)
 
-newColorsCapitalized.sort(reverse = True)
-print(newColorsCapitalized)
+def newColorsCapitalized():
+    for x in range(len(colors)):
+         colors[x] = colors[x].capitalize()
+         x = x + 1
 
+newColorsCapitalized()
+print(colors)
+
+
+colors.sort(reverse = True)
+print(colors)
+
+###
 def location(n):
     return abs (n - 20)
 
@@ -208,5 +219,131 @@ print(numbers)
 
 
 
+### TUPLE 
 
-         
+##Changing items of tuple:
+x = ("apple", "banana", "cherry", "melon", "peach", "mandarin")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+
+##Asteriks
+(red, yellow, *red2) = x 
+
+print(red)
+print(yellow)
+print(red2)
+
+
+##
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+
+
+##loops for tuple:
+
+## for 
+a = (1,2,3,4,5,6,7,8,9)
+for x in a:
+      print(x)
+      
+for x in range(len(a)):
+      print(a[x])
+            
+      
+## while 
+b = ("a","b","c","d")
+x = 0 
+while x != len(b):
+  print(b[x])  
+  x = x + 1
+  
+#### SET
+set1 = {"apple", "banana", "cherry"}
+set1.add("orange")
+print(set1)
+
+set2 =  {"pineapple", "mango", "papaya"}
+set1.update(set2)
+print(set1)
+
+###### Examples and Notes
+examp = {1,2,3,4,5,6,7,8,9}
+examp2 = {2,3,4,5}
+     
+
+## add()	Adds an element to the set
+
+## clear()	Removes all the elements from the set
+
+## copy()	Returns a copy of the set
+
+## difference()	Returns a set containing the difference between two or more sets
+e = examp.difference(examp2)
+print(e)
+
+
+## difference_update()	Removes the items in this set that are also included in another, specified set
+examp.difference_update(examp2)
+print(examp)
+
+      
+## discard()	Remove the specified item
+examp.discard(7)
+print(examp)
+
+
+## intersection()	Returns a set, that is the intersection of two other sets
+content = {"blue","earphone", "phone"}
+content2 = {"mouse", "laptop", "phone"}
+o = content.intersection(content2)
+print(o)
+
+
+## intersection_update()	Removes the items in this set that are not present in other, specified set(s)
+content.intersection_update(content2)
+print(content)
+
+
+## isdisjoint()	Returns whether two sets have a intersection or not
+l = examp.isdisjoint(examp2)
+print(l)
+
+
+## issubset()	Returns whether another set contains this set or not
+a = {1,2,3,4,5}
+b = {2,3}
+
+k = b.issubset(a)
+print(k)
+
+## issuperset()	Returns whether this set contains another set or not
+g = a.issuperset(b)
+print(g)
+
+## pop()	Removes an element from the set
+set2.pop()      ##pop will remove the last item. Since ses does not have any index number we wont know whick item will be deleted.     
+
+## remove()	Removes the specified element
+
+## symmetric_difference()	Returns a set with the symmetric differences of two sets
+c = a.symmetric_difference(b)
+print(c)
+
+
+## symmetric_difference_update()	inserts the symmetric differences from this set and another
+a.symmetric_difference_update(b)
+print(a)
+
+## union()	Return a set containing the union of sets
+c = a.union(b)
+print(c)
+
+## update()	Update the set with the union of this set and others
