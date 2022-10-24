@@ -317,3 +317,24 @@ c = a.union(b)
 print(c)
 
 ## update()	Update the set with the union of this set and others
+
+## DICTIONARIES
+
+car_model = {
+    "brand": "porsche",
+    "model": "911 turbo s",
+    "year": "2024",
+    "color": ["dark blue","devils red", "sunset yellow", "space black", "pure white"],
+    "electricity": True
+    
+    }
+
+print(car_model["year"])
+car_model.get("model") == car_model["model"]
+
+##Add new item 
+car_model["transmission"] = ["manuel", "automatic"]
+
+
+
+
