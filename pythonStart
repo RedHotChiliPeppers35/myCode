@@ -1,12 +1,11 @@
-### Strings:
+### Strings:  
+print("I am Ata and I used to live in Izmır \nCurrently I am studying in Istanbul")  ## \n skips to the next row
 
-      ## \n skips to the next row
-print("I am Ata and I used to live in Izmır \nCurrently I am studying in Istanbul") 
-      ##
-      x = "Hello World !"
+x = "Hello World !"
 print(len(x))
-      ## \ prints the " for this text
-txt = "We are the so-called \"Yildizs\" from the Istanbul." 
+     
+txt = "We are the so-called \"Yildizs\" from the Istanbul."  ## \ prints the " for this text
+
 
 ### Integers: 1,2,3,4,5,6,7,8,9,10,11,12 .....
 ### Float: 0.1, 0.2, 0.3, ....., 1.6, ...., 5.5, ...      
@@ -14,7 +13,6 @@ txt = "We are the so-called \"Yildizs\" from the Istanbul."
 
 
 ### Booleans:
-
 print(10 > 9)
 print(2 < 1)
 
@@ -46,10 +44,8 @@ another = "Text"
 print(isinstance(another,str))
   
 
-
 ### WRITING INTEGER INTO A STRING
-## format method 
-
+# format method 
 a = int
 h_txt = "{} is greater than 10"
 b_txt = "{} is less than 10 but higher than 5"
@@ -72,7 +68,7 @@ formula(7)
 formula(15)
 formula(5)
 
-## example 1
+## example 
 width = 30
 length = 30 
 depth = 30 
@@ -81,7 +77,7 @@ cube_extension = "this cube's width is {}, length is {} and the depth is {}."
 my_cube = cube_extension.format(width, length, depth)
 print(my_cube)   
 
-## example 2 
+## example 
 cost = 25.9
 time = 7
 indigriends = "chicken", "salt", "pepper", "thyme"
@@ -90,7 +86,6 @@ print(receipe.format(indigriends,time,cost))
 
 
 ### LISTS
-
 thisList = ["apple", "banana", 4 , True]   
 print(thisList)
 
@@ -137,10 +132,6 @@ print(list1.index(4, 4, 8))
 ## reverse() Reverses the order of the list
 ## sort()	 Sorts the list
 
-
-
-### FOR LOOP
-
 ##this code will print your list by column by column 
 for x in thisList:    
     print(x)
@@ -148,8 +139,7 @@ for x in thisList:
 for x in range(len(thisList)):
     print(thisList[x])
     
-### WHILE LOOP   
-
+### or   
 a = 0 
 while a < len(thisList):
     print(thisList[a])
@@ -159,8 +149,8 @@ while a < len(thisList):
 
 del thisList
 
-##List Comprehension
 
+##List Comprehension
 colors = ["blue", "red", "orange", "purple", "yellow", "green","black", "white"]
 newList = []
 for x in colors:
@@ -190,7 +180,6 @@ print(newColors)
 
 
 ##SORT
-
 newColors.sort()
 
 def newColorsCapitalized():
@@ -200,7 +189,6 @@ def newColorsCapitalized():
 
 newColorsCapitalized()
 print(colors)
-
 
 colors.sort(reverse = True)
 print(colors)
@@ -218,9 +206,7 @@ numbers.reverse()
 print(numbers)
 
 
-
 ### TUPLE 
-
 ##Changing items of tuple:
 x = ("apple", "banana", "cherry", "melon", "peach", "mandarin")
 y = list(x)
@@ -229,14 +215,12 @@ x = tuple(y)
 
 print(x)
 
-
 ##Asteriks
 (red, yellow, *red2) = x 
 
 print(red)
 print(yellow)
 print(red2)
-
 
 ##
 fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
@@ -246,19 +230,15 @@ print(green)
 print(tropic)
 print(red)
 
-
 ##loops for tuple:
-
-## for 
 a = (1,2,3,4,5,6,7,8,9)
 for x in a:
       print(x)
       
 for x in range(len(a)):
       print(a[x])
-            
-      
-## while 
+
+## or 
 b = ("a","b","c","d")
 x = 0 
 while x != len(b):
@@ -280,25 +260,19 @@ examp2 = {2,3,4,5}
      
 
 ## add()	Adds an element to the set
-
 ## clear()	Removes all the elements from the set
-
 ## copy()	Returns a copy of the set
-
 ## difference()	Returns a set containing the difference between two or more sets
 e = examp.difference(examp2)
 print(e)
 
-
 ## difference_update()	Removes the items in this set that are also included in another, specified set
 examp.difference_update(examp2)
 print(examp)
-
-      
+   
 ## discard()	Remove the specified item
 examp.discard(7)
 print(examp)
-
 
 ## intersection()	Returns a set, that is the intersection of two other sets
 content = {"blue","earphone", "phone"}
@@ -306,16 +280,13 @@ content2 = {"mouse", "laptop", "phone"}
 o = content.intersection(content2)
 print(o)
 
-
 ## intersection_update()	Removes the items in this set that are not present in other, specified set(s)
 content.intersection_update(content2)
 print(content)
 
-
 ## isdisjoint()	Returns whether two sets have a intersection or not
 l = examp.isdisjoint(examp2)
 print(l)
-
 
 ## issubset()	Returns whether another set contains this set or not
 a = {1,2,3,4,5}
@@ -336,7 +307,6 @@ set2.pop()      ##pop will remove the last item. Since ses does not have any ind
 ## symmetric_difference()	Returns a set with the symmetric differences of two sets
 c = a.symmetric_difference(b)
 print(c)
-
 
 ## symmetric_difference_update()	inserts the symmetric differences from this set and another
 a.symmetric_difference_update(b)
