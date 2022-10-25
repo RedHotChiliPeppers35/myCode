@@ -318,6 +318,7 @@ print(c)
 
 ## update()	Update the set with the union of this set and others
 
+
 ## DICTIONARIES
 car_model = {
     "brand": "porsche",
@@ -336,7 +337,7 @@ car_model["transmission"] = ["manuel", "automatic"]
 
 ##Change or update model 
 update_is = car_model.update({"electricity": "false"})
-change_is = car_model["electricty"] = "false"
+change_is = car_model["electricity"] = "false"
 
 ##Get keys
 keys = car_model.keys()
@@ -355,3 +356,31 @@ car_model.pop("electricity")
 print(car_model)
 
 ## deleting or removing item
+# del car_model
+
+del car_model["transmission"]
+#car_model.clear()
+
+for x in car_model:
+    print(x)
+
+for x in car_model:
+    print(car_model[x])
+
+for x in car_model.values():
+    print(x)
+
+for x in  car_model.keys():
+    print(x)
+
+##Creating a new dictionary with already existing one 
+car_model2 = car_model.copy()
+
+car_model2["brand"] = "mercedes"
+car_model2["model"] = "G-Class"
+car_model2["year"] = 2024
+car_model2["color"] = ["black", "hell red", "antrasit", "angel white"]
+car_model2["transmission"] = ["automatic"]
+car_model2["electricity"] = False
+
+print(car_model2)
