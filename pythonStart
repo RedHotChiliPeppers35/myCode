@@ -383,4 +383,30 @@ car_model2["color"] = ["black", "hell red", "antrasit", "angel white"]
 car_model2["transmission"] = ["automatic"]
 car_model2["electricity"] = False
 
-print(car_model2)
+cars = {
+    "car1": car_model,
+    "car2": car_model2
+}
+print(cars["car1"])
+print(cars["car2"])
+
+
+##exercises
+
+carsList = [ {"brand": "porsche", "model": "911 turbo s", "year": 2024, "color": ["dark blue","devils red", "sunset yellow", "space black", "pure white"], "electricity": [True, False],"transmission": ["automatic", "manuel"]},
+          {'brand': 'mercedes', 'model': 'G-Class', 'year': 2024, 'color': ['black', 'hell red', 'antrasit', 'angel white'], 'transmission': 'automatic', 'electricity': False}
+   ]
+
+carDict = {}
+
+for car in carsList:
+    carDict.setdefault(car["brand"],[]).append(car["model"])
+    carDict.setdefault(car["brand"],[]).append(car["year"])
+    carDict.setdefault(car["brand"],[]).append(car["color"])
+    carDict.setdefault(car["brand"],[]).append(car["transmission"])
+    carDict.setdefault(car["brand"],[]).append(car["electricity"])
+    
+
+print(carDict)
+print(carDict.keys())
+
