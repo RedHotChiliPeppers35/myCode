@@ -1,0 +1,112 @@
+
+### TUPLE 
+##Changing items of tuple:
+x = ("apple", "banana", "cherry", "melon", "peach", "mandarin")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+##Asteriks
+(red, yellow, *red2) = x 
+
+print(red)
+print(yellow)
+print(red2)
+
+##
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+
+##loops for tuple:
+a = (1,2,3,4,5,6,7,8,9)
+for x in a:
+      print(x)
+      
+for x in range(len(a)):
+      print(a[x])
+
+## or 
+b = ("a","b","c","d")
+x = 0 
+while x != len(b):
+  print(b[x])  
+  x = x + 1
+  
+#### SET
+set1 = {"apple", "banana", "cherry"}
+set1.add("orange")
+print(set1)
+
+set2 =  {"pineapple", "mango", "papaya"}
+set1.update(set2)
+print(set1)
+
+###### Examples and Notes
+examp = {1,2,3,4,5,6,7,8,9}
+examp2 = {2,3,4,5}
+     
+
+## add()	Adds an element to the set
+## clear()	Removes all the elements from the set
+## copy()	Returns a copy of the set
+## difference()	Returns a set containing the difference between two or more sets
+e = examp.difference(examp2)
+print(e)
+
+## difference_update()	Removes the items in this set that are also included in another, specified set
+examp.difference_update(examp2)
+print(examp)
+   
+## discard()	Remove the specified item
+examp.discard(7)
+print(examp)
+
+## intersection()	Returns a set, that is the intersection of two other sets
+content = {"blue","earphone", "phone"}
+content2 = {"mouse", "laptop", "phone"}
+o = content.intersection(content2)
+print(o)
+
+## intersection_update()	Removes the items in this set that are not present in other, specified set(s)
+content.intersection_update(content2)
+print(content)
+
+## isdisjoint()	Returns whether two sets have a intersection or not
+l = examp.isdisjoint(examp2)
+print(l)
+
+## issubset()	Returns whether another set contains this set or not
+a = {1,2,3,4,5}
+b = {2,3}
+
+k = b.issubset(a)
+print(k)
+
+## issuperset()	Returns whether this set contains another set or not
+g = a.issuperset(b)
+print(g)
+
+## pop()	Removes an element from the set
+set2.pop()      ##pop will remove the last item. Since ses does not have any index number we wont know whick item will be deleted.     
+
+## remove()	Removes the specified element
+
+## symmetric_difference()	Returns a set with the symmetric differences of two sets
+c = a.symmetric_difference(b)
+print(c)
+
+## symmetric_difference_update()	inserts the symmetric differences from this set and another
+a.symmetric_difference_update(b)
+print(a)
+
+## union()	Return a set containing the union of sets
+c = a.union(b)
+print(c)
+
+## update()	Update the set with the union of this set and others

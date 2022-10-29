@@ -1,0 +1,91 @@
+## DICTIONARIES
+car_model = {
+    "brand": "porsche",
+    "model": "911 turbo s",
+    "year": "2024",
+    "color": ["dark blue","devils red", "sunset yellow", "space black", "pure white"],
+    "electricity": [True, False],
+    "transmission": ["automatic", "manuel"],    
+    }
+
+print(car_model["year"])
+car_model.get("model") == car_model["model"]
+
+##Add new item 
+car_model["transmission"] = ["manuel", "automatic"]
+
+##Change or update model 
+update_is = car_model.update({"electricity": "false"})
+change_is = car_model["electricity"] = "false"
+
+##Get keys
+keys = car_model.keys()
+
+## Get the specified index in list in dictionary
+x = car_model["color"][0]
+
+##Get values
+values = car_model.values()
+
+##Get items
+items = car_model.items()
+
+## Remove items
+car_model.pop("electricity")
+print(car_model)
+
+## deleting or removing item
+# del car_model
+
+del car_model["transmission"]
+#car_model.clear()
+
+for x in car_model:
+    print(x)
+
+for x in car_model:
+    print(car_model[x])
+
+for x in car_model.values():
+    print(x)
+
+for x in  car_model.keys():
+    print(x)
+
+##Creating a new dictionary with already existing one 
+car_model2 = car_model.copy()
+
+car_model2["brand"] = "mercedes"
+car_model2["model"] = "G-Class"
+car_model2["year"] = 2024
+car_model2["color"] = ["black", "hell red", "antrasit", "angel white"]
+car_model2["transmission"] = ["automatic"]
+car_model2["electricity"] = False
+
+cars = {
+    "car1": car_model,
+    "car2": car_model2
+}
+print(cars["car1"])
+print(cars["car2"])
+
+
+##exercises
+
+carsList = [ {"brand": "porsche", "model": "911 turbo s", "year": 2024, "color": ["dark blue","devils red", "sunset yellow", "space black", "pure white"], "electricity": [True, False],"transmission": ["automatic", "manuel"]},
+          {'brand': 'mercedes', 'model': 'G-Class', 'year': 2024, 'color': ['black', 'hell red', 'antrasit', 'angel white'], 'transmission': 'automatic', 'electricity': False}
+   ]
+
+carDict = {}
+
+for car in carsList:
+    carDict.setdefault(car["brand"],[]).append(car["model"])
+    carDict.setdefault(car["brand"],[]).append(car["year"])
+    carDict.setdefault(car["brand"],[]).append(car["color"])
+    carDict.setdefault(car["brand"],[]).append(car["transmission"])
+    carDict.setdefault(car["brand"],[]).append(car["electricity"])
+    
+
+print(carDict)
+print(carDict.keys())
+

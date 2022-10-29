@@ -1,0 +1,25 @@
+##SORT
+newColors.sort()
+
+def newColorsCapitalized():
+    for x in range(len(colors)):
+         colors[x] = colors[x].capitalize()
+         x = x + 1
+
+newColorsCapitalized()
+print(colors)
+
+colors.sort(reverse = True)
+print(colors)
+
+###
+def location(n):
+    return abs (n - 20)
+
+numbers = [10, 23, 41, 54, 25]
+
+numbers.sort(key = location)
+print(numbers)
+
+numbers.reverse()
+print(numbers)

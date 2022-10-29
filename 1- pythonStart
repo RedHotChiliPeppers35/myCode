@@ -1,0 +1,90 @@
+### Strings:  
+print("I am Ata and I used to live in Izmır \nCurrently I am studying in Istanbul")  ## \n skips to the next row
+
+x = "Hello World !"
+print(len(x))
+     
+txt = "We are the so-called \"Yildizs\" from the Istanbul."  ## \ prints the " for this text
+
+
+### Integers: 1,2,3,4,5,6,7,8,9,10,11,12 .....
+### Float: 0.1, 0.2, 0.3, ....., 1.6, ...., 5.5, ...      
+### Complex: 1j, 3+5j, .....
+
+
+### Booleans:
+print(10 > 9)
+print(2 < 1)
+
+a = 45
+b = 35
+if a+b >= 70:
+      print("Correct!")
+else: 
+    print("False :(")
+
+print(bool("Yo yo yo !"))
+print(bool(41))
+print(bool(0))
+print(bool(""))
+
+def myFunction():
+    return False
+
+if myFunction():
+      print("True")
+else:
+      print("Its false sorry :)")
+
+x = 5
+y = 5 
+print(x is y)
+
+another = "Text"
+print(isinstance(another,str))
+  
+
+### WRITING INTEGER INTO A STRING
+# format method 
+a = int
+h_txt = "{} is greater than 10"
+b_txt = "{} is less than 10 but higher than 5"
+l_txt = "{} is less than 10"
+
+def formula(a):
+      if a > 10:
+          print(h_txt.format(a))
+      elif a == 10: 
+          print(f"a is {a}")
+      elif a > 5:
+          print(b_txt.format(a))
+      elif a == 5: 
+          print(f"a is {a}")
+      else:
+          print(l_txt.format(a))
+              
+formula(10)
+formula(7)
+formula(15)
+formula(5)
+
+## example 
+width = 30
+length = 30 
+depth = 30 
+
+cube_extension = "this cube's width is {}, length is {} and the depth is {}."
+my_cube = cube_extension.format(width, length, depth)
+print(my_cube)   
+
+## example 
+cost = 25.9
+time = 7
+indigriends = "chicken", "salt", "pepper", "thyme"
+receipe = ("this reciepe has {}, and needs {} minutes to cook and costs {} $")
+print(receipe.format(indigriends,time,cost))  
+
+
+
+
+

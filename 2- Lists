@@ -1,0 +1,92 @@
+### LISTS
+thisList = ["apple", "banana", 4 , True]   
+print(thisList)
+
+thisList[1] = "watermelon"
+print(thisList)
+
+thisList.insert(1,"melon")
+print(thisList)
+
+thisList.append(64)
+print(thisList)
+
+thatList = ["red", "yellow", "green", 4, True, 64]
+thisList.extend(thatList)
+print(thisList)
+
+#remove first 2 item
+thisList.remove("apple") #this one remove the actual first item
+thisList.pop(0)  #after removing actual first item the 2nd item will be first item so this code will remove the current first item 
+print(thisList)
+
+del thatList
+
+thisList.clear()
+print(thisList)
+
+thisList.extend(["blue", "red", "purple"])
+thisList.append("yellow")
+print(thisList)
+
+list1 = [1, 2, 3, 4, 1, 1, 1, 4, 5]   ##shows me the "number 4" between 4-8 index
+print(list1.index(4, 4, 8))
+
+
+## append()	 Adds an element at the end of the list
+## clear()	 Removes all the elements from the list
+## copy()	 Returns a copy of the list
+## count()	 Returns the number of elements with the specified value
+## extend()	 Add the elements of a list (or any iterable), to the end of the current list
+## index()	 Returns the index of the first element with the specified value
+## insert()	 Adds an element at the specified position
+## pop()	 Removes the element at the specified position
+## remove()	 Removes the item with the specified value
+## reverse() Reverses the order of the list
+## sort()	 Sorts the list
+
+##this code will print your list by column by column 
+for x in thisList:    
+    print(x)
+    
+for x in range(len(thisList)):
+    print(thisList[x])
+    
+### or   
+a = 0 
+while a < len(thisList):
+    print(thisList[a])
+    a += 1
+
+[print(a) for a in thisList]
+
+del thisList
+
+
+##List Comprehension
+colors = ["blue", "red", "orange", "purple", "yellow", "green","black", "white"]
+newList = []
+for x in colors:
+     if "u" in x:
+         newList.append(x)       
+print(newList)
+
+##or
+
+newListOr = [x for x in colors if "u" in x ]
+print(newListOr)
+
+newColors = []
+
+for x in colors : 
+    
+    if x != "purple" and x != "red":
+        newColors.append(x)
+print(newColors)
+
+newColors = [x.upper() for x in newColors]    
+print(newColors)
+
+for x in range(3): 
+       newColors[x] = newColors[x].lower()          
+print(newColors)
