@@ -1,5 +1,6 @@
 ##SORT
-newColors.sort()
+colors = ["blue", "red", "orange", "purple", "yellow", "green","black", "white"]
+colors.sort()
 
 def newColorsCapitalized():
     for x in range(len(colors)):
@@ -23,3 +24,4 @@ print(numbers)
 
 numbers.reverse()
 print(numbers)
+

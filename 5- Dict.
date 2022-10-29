@@ -71,7 +71,6 @@ print(cars["car2"])
 
 
 ##exercises
-
 carsList = [ {"brand": "porsche", "model": "911 turbo s", "year": 2024, "color": ["dark blue","devils red", "sunset yellow", "space black", "pure white"], "electricity": [True, False],"transmission": ["automatic", "manuel"]},
           {'brand': 'mercedes', 'model': 'G-Class', 'year': 2024, 'color': ['black', 'hell red', 'antrasit', 'angel white'], 'transmission': 'automatic', 'electricity': False}
    ]
@@ -88,4 +87,13 @@ for car in carsList:
 
 print(carDict)
 print(carDict.keys())
+
+##fromkeys
+list = ["mercedes", "bmw", "audi", "porsche"]
+carBrand = dict.fromkeys(list,"german brand")
+print(carBrand)
+
+
+
+
 
