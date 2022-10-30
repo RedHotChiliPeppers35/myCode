@@ -1,0 +1,32 @@
+## While loops
+i = 8
+while i >= 8 and i <= 15:
+ print(i)
+ i += 1
+
+#break
+a = 7
+while a >= 5 and a <= 15:
+    if(a == 12):
+        break
+    print(a)
+
+    a += 1
+#continue
+
+b = 6
+while b < 12:
+    b += 1 
+    if b == 10:
+        continue
+    print(b)
+
+#else
+
+c = 0 
+while c < 10:
+    print(c)
+    c += 1
+else: 
+    print("c is no longer less than 10 ")
+   

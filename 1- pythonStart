@@ -1,5 +1,5 @@
 ### Strings:  
-print("I am Ata and I used to live in Izmır \nCurrently I am studying in Istanbul")  ## \n skips to the next row
+print("I am Ata and I used to live in Izmir \nCurrently I am studying in Istanbul")  ## \n skips to the next row
 
 x = "Hello World !"
 print(len(x))
@@ -54,11 +54,11 @@ l_txt = "{} is less than 10"
 def formula(a):
       if a > 10:
           print(h_txt.format(a))
-      elif a == 10: 
+      if a == 10: 
           print(f"a is {a}")
-      elif a > 5:
+      if a > 5:
           print(b_txt.format(a))
-      elif a == 5: 
+      if a == 5: 
           print(f"a is {a}")
       else:
           print(l_txt.format(a))

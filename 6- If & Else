@@ -1,2 +1,29 @@
 ##If & Else
+a = 100
+b = 200 
+c = 300 
 
+## and / or
+if a < b and b < c:
+    print("true")
+else:
+    print("false")
+
+if a < b or b > c: 
+    print("true")
+else: 
+    print("false")
+
+##nested ifs
+d = 48
+if d > 80:
+    print("d > 80")
+if d > 40:
+    print("d > 40")
+else:
+    print(d < 40)
+
+## pass
+
+if b > a: 
+    pass
