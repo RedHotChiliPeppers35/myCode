@@ -1,0 +1,65 @@
+## Functions
+
+def myFunction(): 
+    print("This is your function !")
+
+myFunction()
+
+
+def fullName(firstName, lastName):
+    print(firstName + " " + lastName)
+
+fullName("Jack", "Allen")
+
+##Arbitary Functions
+def childs(*kids):
+    print("The most intelligent child is " + kids[1])
+
+childs("Jack" + "Adam" + "Barney", "Martin")
+
+def childs2(child1, child2, child3):
+    print("The youngest child is " + child3)
+
+childs2(child1 = "Thomas", child2 = "Brad", child3 = "Jack")
+
+##Arbitary keywords
+def lastName(**person):
+    print("His last name is " + person["lName"])
+
+lastName(fName = "Thomas", age = 27, lName = "Shelby")
+
+def myCountry(country = "Finland"):
+    print ("I am from " + country)
+
+myCountry("Turkey")
+myCountry()
+
+##Passing list as an argument
+def myFunction(num):
+    for x in num:
+        print(x)
+
+myList = [1,2,3,4,5,6,7,8,9]
+
+myFunction(myList)
+
+##Return 
+def my_function(x):
+  return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+
+##Pass
+def myFunction():
+    pass
+
+##exercise for recursion 
+
+def recursion(k):
+    if k > 0:
+        result = k - recursion(k - 1)
+        print(result)
+
+recursion(5)
